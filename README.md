@@ -2,12 +2,13 @@
 
 Manage the database in backend
 
+## Versions
+
+* v1 = Shopware 5
+* v2 = Shopware Platform
+
 ## MySQL
-![Adminer in Shopware](https://ipfs.io/ipfs/QmdUVhnuzidwqQgyAi7bd4hJAM26GEw7afR7Abx2ep1Kj9)
-
-
-## ElasticSearch
-![Adminer in Shopware](https://ipfs.io/ipfs/QmUpjMBEHM7To2h9WUtE2dFHMDxNA778VS3FM2pEtYWGJ4)
+![Adminer in Shopware](https://i.imgur.com/XuUWCaz.png)
 
 # Installation
 

@@ -1,0 +1,11 @@
+<sw-page class="swag-bundle-list">
+    <template slot="content">
+        <iframe v-if="apiAdminerUrl" :src="apiAdminerUrl" width="100%" height="99%" frameborder="0"></iframe>
+    </template>
+
+    <template slot="smart-bar-actions">
+        <sw-button variant="primary" v-if="apiAdminerUrl" @click="openNewTab">
+            Open in new Tab
+        </sw-button>
+    </template>
+</sw-page>

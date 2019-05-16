@@ -1,14 +1,20 @@
 {
-  "name": "frosh/adminer",
-  "type": "shopware-plugin",
-  "keywords": ["adminer", "shopware", "frosh"],
-  "description": "Adminer for Shopware",
-  "license": "MIT",
-  "extra": {
-    "installer-name": "FroshAdminer"
-  },
-  "require": {
-    "php": ">=5.5.9",
-    "composer/installers": "^1.0"
-  }
+    "name": "frosh/adminer",
+    "type": "shopware-platform-plugin",
+    "keywords": ["adminer", "shopware", "frosh"],
+    "description": "Adminer for Shopware",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Frosh\\Adminer\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "Frosh\\Adminer\\Adminer",
+        "copyright": "FriendsOfShopware",
+        "label": {
+            "de-DE": "Adminer für das Admin",
+            "en-GB": "Adminer for Admin"
+        }
+    }
 }
