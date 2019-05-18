@@ -1,6 +1,6 @@
 # FroshAdminer
 
-Manage the database in backend
+Manage the database in administration
 
 ## Versions
 
