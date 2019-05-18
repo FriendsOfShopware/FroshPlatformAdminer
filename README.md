@@ -4,8 +4,8 @@ Manage the database in backend
 
 ## Versions
 
-* v1 = Shopware 5
-* v2 = Shopware Platform
+* [FroshAdminer](https://github.com/FriendsOfShopware/FroshAdminer) = Shopware 5
+* FroshPlatformAdminer = Shopware Platform
 
 ## MySQL
 ![Adminer in Shopware](https://i.imgur.com/XuUWCaz.png)
