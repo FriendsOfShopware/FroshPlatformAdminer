@@ -4,6 +4,6 @@ namespace Frosh\Adminer;
 
 use Shopware\Core\Framework\Plugin;
 
-class Adminer extends Plugin
+class FroshPlatformAdminer extends Plugin
 {
 }

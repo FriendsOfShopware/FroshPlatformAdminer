@@ -6,10 +6,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Shopware\Core\Framework\Routing\Annotation\RouteScope;
 
 class Adminer extends AbstractController
 {
     /**
+     * @RouteScope(scopes={"api"})
      * @Route(path="/api/v1/frosh_adminer/login")
      */
     public function index(Request $request): JsonResponse
