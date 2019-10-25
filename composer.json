@@ -16,6 +16,10 @@
             "Frosh\\Adminer\\": "src/"
         }
     },
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*"
+    },
     "extra": {
         "shopware-plugin-class": "Frosh\\Adminer\\FroshPlatformAdminer",
         "copyright": "FriendsOfShopware",
