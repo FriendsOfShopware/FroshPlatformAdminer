@@ -1,2 +1,2 @@
 import './src/module/frosh-adminer';
-import './src/init/api-service.init'
+import './src/init/api-service.init';

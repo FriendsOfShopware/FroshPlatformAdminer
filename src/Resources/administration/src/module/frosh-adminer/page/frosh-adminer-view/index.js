@@ -1,4 +1,4 @@
-import { Component } from 'src/core/shopware';
+const { Component } = Shopware;
 import template from './frosh-adminer-view.html.twig';
 
 Component.register('frosh-adminer-view', {

@@ -1,3 +1,8 @@
+# 0.1.1
+
+* Adminer Update to 4.7.4
+
+
 # 0.1.0
 
 * First release in store
