@@ -2,11 +2,11 @@
 
 namespace Frosh\Adminer\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Shopware\Core\Framework\Routing\Annotation\RouteScope;
+use Symfony\Component\Routing\Annotation\Route;
 
 class Adminer extends AbstractController
 {
@@ -40,7 +40,7 @@ class Adminer extends AbstractController
         ]);
 
         $response->headers->set('Set-Cookie', sprintf('adminer_sid=%s; path=/; HttpOnly; SameSite=lax', session_id()));
-        $response->headers->set('Set-Cookie', sprintf('adminer_version=4.7.4; path=/; HttpOnly; SameSite=lax'), false);
+        $response->headers->set('Set-Cookie', sprintf('adminer_version=4.7.5; path=/; HttpOnly; SameSite=lax'), false);
         $response->headers->set('Set-Cookie', 'adminer_key=; Expires=-1; path=/; HttpOnly; SameSite=lax', false);
 
         return $response;

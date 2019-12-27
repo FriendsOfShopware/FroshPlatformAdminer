@@ -1,3 +1,7 @@
+# 0.1.2
+
+* Adminer Update to 4.7.5
+
 # 0.1.1
 
 * Adminer Update to 4.7.4
