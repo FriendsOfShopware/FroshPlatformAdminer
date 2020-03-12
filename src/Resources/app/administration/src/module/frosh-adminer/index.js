@@ -1,10 +1,11 @@
-const { Module } = Shopware;
 import './page/frosh-adminer-view';
+
+const { Module } = Shopware;
 
 Module.register('frosh-adminer', {
     type: 'plugin',
     name: 'Adminer',
-    description: 'Adminer',
+    description: 'frosh-adminer.general.description',
     color: '#9AA8B5',
     icon: 'default-device-server',
     favicon: 'icon-module-settings.png',
@@ -17,7 +18,7 @@ Module.register('frosh-adminer', {
     },
 
     navigation: [{
-        label: 'Adminer',
+        label: 'frosh-adminer.general.navigationLabel',
         color: '#9AA8B5',
         icon: 'default-device-server',
         path: 'frosh.adminer.list',
