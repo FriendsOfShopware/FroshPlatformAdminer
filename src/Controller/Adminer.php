@@ -13,7 +13,7 @@ class Adminer extends AbstractController
 {
     /**
      * @RouteScope(scopes={"api"})
-     * @Route("/api/v1/frosh_adminer/login", name="api.frosh_adminer", methods={"GET"})
+     * @Route("/api/v{version}/frosh_adminer/login", name="api.frosh_adminer", methods={"GET"})
 
      */
     public function login(Request $request): JsonResponse
