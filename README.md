@@ -19,4 +19,4 @@ Manage the database in administration
 
 ## Install with composer
 * Change to your root Installation of shopware
-* Run command `composer require frosh/adminer-platform` and install and active plugin with Plugin Manager 
+* Run command `composer require frosh/adminer-platform:dev-master` and install and active plugin with Plugin Manager 
