@@ -6,20 +6,14 @@ Component.register('frosh-adminer-view', {
 
     inject: ['AdminerService'],
 
+    created() {
+        this.createdComponent();
+    },
+
     data() {
         return {
             apiAdminerUrl: false
         };
-    },
-
-    metaInfo() {
-        return {
-            title: this.$createTitle()
-        };
-    },
-
-    created() {
-        this.createdComponent();
     },
 
     methods: {

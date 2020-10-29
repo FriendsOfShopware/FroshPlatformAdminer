@@ -1,8 +1,6 @@
 {
     "frosh-adminer": {
-        "general": {
-            "description": "Adminer",
-            "navigationLabel": "Adminer"
-        }
+        "title": "Adminer",
+        "openInNewTab": "Im neuen Tab öffnen"
     }
 }

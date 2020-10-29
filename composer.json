@@ -1,6 +1,6 @@
 {
     "name": "frosh/adminer-platform",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "type": "shopware-platform-plugin",
     "keywords": ["adminer", "shopware", "frosh"],
     "description": "Adminer for Shopware",
@@ -17,10 +17,9 @@
         }
     },
     "require": {
-        "shopware/core": "~6.1",
-        "shopware/administration": "~6.1"
+        "shopware/core": "~6.3",
+        "shopware/administration": "~6.3"
     },
-    "minimum-stability": "RC",
     "extra": {
         "shopware-plugin-class": "Frosh\\Adminer\\FroshPlatformAdminer",
         "copyright": "FriendsOfShopware",
@@ -31,6 +30,14 @@
         "description": {
             "de-DE": "Erlaubt dir direkt in der Administration auf die Datenbank zuzugreifen",
             "en-GB": "Allows you to manage your database inside the administration"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://github.com/FriendsOfShopware/FroshPlatformAdminer",
+            "en-GB": "https://github.com/FriendsOfShopware/FroshPlatformAdminer"
+        },
+        "supportLink": {
+            "de-DE": "https://github.com/FriendsOfShopware/FroshPlatformAdminer/issues",
+            "en-GB": "https://github.com/FriendsOfShopware/FroshPlatformAdminer/issues"
         }
     }
 }

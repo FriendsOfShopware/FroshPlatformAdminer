@@ -4,9 +4,8 @@ const { Module } = Shopware;
 
 Module.register('frosh-adminer', {
     type: 'plugin',
-    name: 'Adminer',
-    description: 'frosh-adminer.general.description',
-    title: 'frosh-adminer.general.description',
+    name: 'frosh-adminer.title',
+    description: 'frosh-adminer.title',
     color: '#9AA8B5',
     icon: 'default-device-server',
     favicon: 'icon-module-settings.png',
@@ -18,11 +17,12 @@ Module.register('frosh-adminer', {
         }
     },
 
-    navigation: [{
-        label: 'frosh-adminer.general.navigationLabel',
-        color: '#9AA8B5',
-        icon: 'default-device-server',
-        path: 'frosh.adminer.list',
-        position: 100
-    }]
+    settingsItem: [
+        {
+            group: 'plugins',
+            to: 'frosh.adminer.list',
+            icon: 'default-device-server',
+            label: 'frosh-adminer.title'
+        }
+    ]
 });
