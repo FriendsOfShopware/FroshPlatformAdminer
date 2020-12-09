@@ -4,7 +4,7 @@
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
-	"workspaceFolder": "/var/www/html/custom/plugins/FroshPlatformAdminer",
-  "postCreateCommand": "/bin/bash /entrypoint.sh",
-  "forwardPorts": [80, 1080]
+	"workspaceFolder": "/var/www/html",
+  	"postCreateCommand": "ln -s /home/dockware/workspace/FroshPlatformAdminer/ /var/www/html/custom/plugins/FroshPlatformAdminer",
+  	"forwardPorts": [80, 1080]
 }
