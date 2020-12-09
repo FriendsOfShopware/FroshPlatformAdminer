@@ -1,0 +1,11 @@
+{
+	"name": "Adminer",
+	"image": "dockware/play:latest",
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"workspaceFolder": "/var/www/html/custom/plugins/FroshPlatformAdminer",
+	"containerUser": "www-data",
+  "postCreateCommand": "/bin/bash /entrypoint.sh",
+  "forwardPorts": [80, 1080]
+}
