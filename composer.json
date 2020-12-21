@@ -28,8 +28,8 @@
             "en-GB": "Adminer for Admin"
         },
         "description": {
-            "de-DE": "Erlaubt dir direkt in der Administration auf die Datenbank zuzugreifen",
-            "en-GB": "Allows you to manage your database inside the administration"
+            "de-DE": "Erlaubt direkt in der Administration, mit der Shopware Konfiguration, auf die Datenbank zuzugreifen. Nützlich sofern kein anderer Datenbank Zugriff des Hoster o.ä. vorliegt.",
+            "en-GB": "Allows to manage your database inside the administration, using the Shopware database configuration. Useful if there is no other easy access from the hoster to the database."
         },
         "manufacturerLink": {
             "de-DE": "https://github.com/FriendsOfShopware/FroshPlatformAdminer",
