@@ -1,3 +1,7 @@
+# 0.2.1
+
+* Adminer Update auf 4.8.0
+
 # 0.2.0
 
 * Adminer Update auf 4.7.7
