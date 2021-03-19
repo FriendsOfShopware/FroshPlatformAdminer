@@ -1,3 +1,7 @@
+# 0.3.0
+
+* Shopware 6.4 compatibility
+
 # 0.2.1
 
 * Adminer Update auf 4.8.0
