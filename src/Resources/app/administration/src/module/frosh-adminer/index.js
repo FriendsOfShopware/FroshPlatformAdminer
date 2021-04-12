@@ -13,7 +13,7 @@ Module.register('frosh-adminer', {
     routes: {
         list: {
             component: 'frosh-adminer-view',
-            path: 'list'
+            path: 'list',
         }
     },
 
@@ -24,5 +24,10 @@ Module.register('frosh-adminer', {
             icon: 'default-device-server',
             label: 'frosh-adminer.title'
         }
-    ]
+    ],
+
+    extensionEntryRoute: {
+        extensionName: 'FroshPlatformAdminer',
+        route: 'frosh.adminer.list'
+    }
 });
