@@ -1,3 +1,7 @@
+# 0.3.1
+
+* Added acl support
+
 # 0.3.0
 
 * Shopware 6.4 compatibility
