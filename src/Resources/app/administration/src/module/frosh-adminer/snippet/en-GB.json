@@ -2,5 +2,12 @@
     "frosh-adminer": {
         "title": "Adminer",
         "openInNewTab": "Open in new tab"
+    },
+    "sw-privileges": {
+        "additional_permissions": {
+            "system": {
+                "frosh_adminer": "Adminer"
+            }
+        }
     }
 }

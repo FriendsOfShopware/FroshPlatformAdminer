@@ -2,6 +2,7 @@
 
 namespace Frosh\Adminer\Controller;
 
+use Shopware\Core\Framework\Routing\Annotation\Acl;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -9,6 +10,9 @@ use Shopware\Core\Framework\Routing\Annotation\RouteScope;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Acl(value={"system.frosh_adminer"})
+ */
 class Adminer extends AbstractController
 {
     /**

@@ -1,3 +1,4 @@
+import './acl';
 import './page/frosh-adminer-view';
 
 const { Module } = Shopware;
@@ -14,6 +15,7 @@ Module.register('frosh-adminer', {
         list: {
             component: 'frosh-adminer-view',
             path: 'list',
+            privilege: 'system.frosh_adminer'
         }
     },
 
@@ -22,7 +24,8 @@ Module.register('frosh-adminer', {
             group: 'plugins',
             to: 'frosh.adminer.list',
             icon: 'default-device-server',
-            label: 'frosh-adminer.title'
+            label: 'frosh-adminer.title',
+            privilege: 'system.frosh_adminer'
         }
     ],
 
