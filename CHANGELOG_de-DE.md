@@ -1,3 +1,7 @@
+# 0.3.2
+
+* Shopware 6.4.5 compatibility
+
 # 0.3.1
 
 * Added ACL support
