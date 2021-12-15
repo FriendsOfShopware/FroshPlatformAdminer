@@ -1,4 +1,4 @@
-const { ApiService } = Shopware;
+const ApiService = Shopware.Classes.ApiService;
 
 class AdminerService extends ApiService {
     constructor(httpClient, loginService, apiEndpoint = 'frosh_adminer') {
