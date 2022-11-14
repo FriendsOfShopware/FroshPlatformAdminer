@@ -1,3 +1,7 @@
+# 0.3.4
+
+* Optimiere die Ermittlung der Datenbankverbindung
+
 # 0.3.3
 
 * Adminer Update auf 4.8.1

@@ -1,3 +1,7 @@
+# 0.3.4
+
+* Optimize the determination of the database connection
+
 # 0.3.3
 
 * Adminer Update to 4.8.1
