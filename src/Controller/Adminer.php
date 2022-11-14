@@ -2,11 +2,12 @@
 
 namespace Frosh\Adminer\Controller;
 
+use Shopware\Core\DevOps\Environment\EnvironmentHelper;
 use Shopware\Core\Framework\Routing\Annotation\Acl;
+use Shopware\Core\Framework\Routing\Annotation\RouteScope;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Shopware\Core\Framework\Routing\Annotation\RouteScope;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -69,7 +70,7 @@ class Adminer extends AbstractController
 
     private function getDatabaseCredentials(): array
     {
-        $db = parse_url(getenv('DATABASE_URL'));
+        $db = parse_url(EnvironmentHelper::getVariable('DATABASE_URL'));
         $db = array_map('rawurldecode', $db);
         $db['path'] = substr($db['path'], 1);
         if (!isset($db['pass'])) {
