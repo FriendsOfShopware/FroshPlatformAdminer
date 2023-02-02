@@ -6,7 +6,7 @@
 
 
     <services>
-        <service id="Frosh\Adminer\Controller\Adminer" public="true">
+        <service id="Frosh\Adminer\Controller\AdminerController" public="true">
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>
