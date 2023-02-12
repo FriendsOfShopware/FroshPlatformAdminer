@@ -3,24 +3,15 @@
 namespace Frosh\Adminer\Controller;
 
 use Shopware\Core\DevOps\Environment\EnvironmentHelper;
-use Shopware\Core\Framework\Routing\Annotation\Acl;
-use Shopware\Core\Framework\Routing\Annotation\RouteScope;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Acl(value={"system.frosh_adminer"})
- */
-class Adminer extends AbstractController
+class AdminerController extends AbstractController
 {
-    /**
-     * @RouteScope(scopes={"api"})
-     * @Route("/api/frosh_adminer/login", name="api.frosh_adminer", methods={"GET"})
-     * @Route("/api/v{version}/frosh_adminer/login", name="api.frosh_adminer_old", methods={"GET"})
-     */
+    #[Route(path: '/api/frosh_adminer/login', name: 'api.frosh_adminer', methods: ['GET'], defaults: ['_acl' => ['system.frosh_adminer'], '_routeScope' => ['api']])]
     public function login(Request $request): JsonResponse
     {
         error_reporting(0);
@@ -57,10 +48,7 @@ class Adminer extends AbstractController
         return $response;
     }
 
-    /**
-     * @RouteScope(scopes={"administration"})
-     * @Route("/admin/adminer", defaults={"auth_required"=false}, name="administration.frosh_adminer", methods={"GET", "POST"})
-     */
+    #[Route(path: '/admin/adminer', name: 'administration.frosh_adminer', methods: ['GET', 'POST'], defaults: ['auth_required' => false, '_routeScope' => ['administration']])]
     public function index()
     {
         unset($_POST['auth']);
