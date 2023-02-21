@@ -8,7 +8,7 @@ Module.register('frosh-adminer', {
     name: 'frosh-adminer.title',
     description: 'frosh-adminer.title',
     color: '#9AA8B5',
-    icon: 'default-device-server',
+    icon: 'regular-database',
     favicon: 'icon-module-settings.png',
 
     routes: {
@@ -23,7 +23,7 @@ Module.register('frosh-adminer', {
         {
             group: 'plugins',
             to: 'frosh.adminer.list',
-            icon: 'default-device-server',
+            icon: 'regular-database',
             label: 'frosh-adminer.title',
             privilege: 'system.frosh_adminer'
         }
