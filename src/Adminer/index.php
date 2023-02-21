@@ -10,7 +10,8 @@ function adminer_object()
 
     return new AdminerPlugin([
         new AdminerFrames(true),
-        new AdminerTablesFilter()
+        new AdminerTablesFilter(),
+        new AdminerLoginPasswordLess(),
     ]);
 }
 
