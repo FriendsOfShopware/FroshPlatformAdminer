@@ -48,7 +48,7 @@ class AdminerController extends AbstractController
         return $response;
     }
 
-    #[Route(path: '/admin/adminer', name: 'administration.frosh_adminer', methods: ['GET', 'POST'], defaults: ['auth_required' => false, '_routeScope' => ['administration']])]
+    #[Route(path: '/%shopware_administration.path_name%/adminer', name: 'administration.frosh_adminer', methods: ['GET', 'POST'], defaults: ['auth_required' => false, '_routeScope' => ['administration']])]
     public function index()
     {
         unset($_POST['auth']);
