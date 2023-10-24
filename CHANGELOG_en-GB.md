@@ -1,3 +1,7 @@
+# 1.0.1
+
+- Add compatibility for custom admin path given by SHOPWARE_ADMINISTRATION_PATH_NAME
+
 # 1.0.0
 
 - Shopware 6.5 compatibility
