@@ -1,13 +1,13 @@
 <sw-page class="adminer">
-    <template slot="smart-bar-header">
+    <template #smart-bar-header>
         <h2>Adminer</h2>
     </template>
 
-    <template slot="content">
+    <template #content>
         <iframe v-if="apiAdminerUrl" :src="apiAdminerUrl" width="100%" height="99%" frameborder="0"></iframe>
     </template>
 
-    <template slot="smart-bar-actions">
+    <template #smart-bar-actions>
         <sw-button variant="primary" v-if="apiAdminerUrl" @click="openNewTab">
             {{ $tc('frosh-adminer.openInNewTab') }}
         </sw-button>
