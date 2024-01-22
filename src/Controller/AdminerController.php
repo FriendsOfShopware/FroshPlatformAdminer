@@ -7,11 +7,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 class AdminerController extends AbstractController
 {
-    #[Route(path: '/api/frosh_adminer/login', name: 'api.frosh_adminer', methods: ['GET'], defaults: ['_acl' => ['system.frosh_adminer'], '_routeScope' => ['api']])]
+    #[Route(path: '/api/frosh_adminer/login', name: 'api.frosh_adminer', defaults: ['_acl' => ['system.frosh_adminer'], '_routeScope' => ['api']], methods: ['GET'])]
     public function login(Request $request): JsonResponse
     {
         error_reporting(0);
@@ -48,8 +48,8 @@ class AdminerController extends AbstractController
         return $response;
     }
 
-    #[Route(path: '/%shopware_administration.path_name%/adminer', name: 'administration.frosh_adminer', methods: ['GET', 'POST'], defaults: ['auth_required' => false, '_routeScope' => ['administration']])]
-    public function index()
+    #[Route(path: '/%shopware_administration.path_name%/adminer', name: 'administration.frosh_adminer', defaults: ['auth_required' => false, '_routeScope' => ['administration']], methods: ['GET', 'POST'])]
+    public function index(): Response
     {
         unset($_POST['auth']);
         require __DIR__ . '/../Adminer/index.php';

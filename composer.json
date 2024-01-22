@@ -1,6 +1,6 @@
 {
     "name": "frosh/adminer-platform",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "type": "shopware-platform-plugin",
     "keywords": ["adminer", "shopware", "frosh"],
     "description": "Adminer for Shopware",
@@ -17,8 +17,8 @@
         }
     },
     "require": {
-        "shopware/core": "~6.5",
-        "shopware/administration": "~6.5"
+        "shopware/core": "~6.6",
+        "shopware/administration": "~6.6"
     },
     "extra": {
         "shopware-plugin-class": "Frosh\\Adminer\\FroshPlatformAdminer",
