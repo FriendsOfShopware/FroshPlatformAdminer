@@ -38,3 +38,5 @@
 
 # Composer PHAR
 /composer.phar
+
+/src/Resources/public/administration/

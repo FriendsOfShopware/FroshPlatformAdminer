@@ -51,8 +51,9 @@ class AdminerController extends AbstractController
     #[Route(path: '/%shopware_administration.path_name%/adminer', name: 'administration.frosh_adminer', defaults: ['auth_required' => false, '_routeScope' => ['administration']], methods: ['GET', 'POST'])]
     public function index(): Response
     {
+        chdir(__DIR__ . '/../Adminer');;
         unset($_POST['auth']);
-        require __DIR__ . '/../Adminer/index.php';
+        require __DIR__ . '/../Adminer/Adminer.php';
         return new Response('');
     }
 

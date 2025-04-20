@@ -17,8 +17,8 @@
         }
     },
     "require": {
-        "shopware/core": "~6.6",
-        "shopware/administration": "~6.6"
+        "shopware/core": "~6.6 || ~6.7",
+        "shopware/administration": "~6.6 || ~6.7"
     },
     "extra": {
         "shopware-plugin-class": "Frosh\\Adminer\\FroshPlatformAdminer",
