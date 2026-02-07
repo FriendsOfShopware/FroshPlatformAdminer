@@ -1,6 +1,6 @@
 {
     "name": "frosh/adminer-platform",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "type": "shopware-platform-plugin",
     "keywords": ["adminer", "shopware", "frosh"],
     "description": "Adminer for Shopware",
