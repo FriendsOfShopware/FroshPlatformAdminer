@@ -25,6 +25,7 @@ class AdminerController extends AbstractController
 
         header_remove('Set-Cookie');
         $_SESSION["token"] = rand(1, 1e6);
+        $_SESSION['frosh_adminer_authenticated'] = true;
 
         $_SESSION["dbs"]['server'][$credentials['host']][$credentials['user']] = [
             $credentials['path']
@@ -51,7 +52,15 @@ class AdminerController extends AbstractController
     #[Route(path: '/%shopware_administration.path_name%/adminer', name: 'administration.frosh_adminer', defaults: ['auth_required' => false, '_routeScope' => ['administration']], methods: ['GET', 'POST'])]
     public function index(): Response
     {
-        chdir(__DIR__ . '/../Adminer');;
+        session_cache_limiter('');
+        session_name('adminer_sid');
+        session_start();
+
+        if (empty($_SESSION['frosh_adminer_authenticated'])) {
+            return new Response('Forbidden', Response::HTTP_FORBIDDEN);
+        }
+
+        chdir(__DIR__ . '/../Adminer');
         unset($_POST['auth']);
         require __DIR__ . '/../Adminer/Adminer.php';
         return new Response('');
