@@ -34,9 +34,14 @@ class AdminerController extends AbstractController
         $_SESSION["db"]['server'][$credentials['host']][$credentials['user']][$credentials['path']] = true;
         $_SESSION["pwds"]['server'][$credentials['host']][$credentials['user']] = $credentials['pass'];
 
+        $host = $credentials['host'];
+        if (!empty($credentials['port']) && $credentials['port'] !== 3306) {
+            $host .= ':' . $credentials['port'];
+        }
+
         $response = new JsonResponse([
             'url' => $this->generateUrl('administration.frosh_adminer', [
-                'server' => $credentials['host'],
+                'server' => $host,
                 'username' => $credentials['user'],
                 'db' => $credentials['path'],
             ]),
