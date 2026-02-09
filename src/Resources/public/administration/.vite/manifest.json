@@ -1,0 +1,11 @@
+{
+  "main.js": {
+    "file": "js/frosh-platform-adminer.js",
+    "name": "frosh-platform-adminer",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "css/frosh-platform-adminer.css"
+    ]
+  }
+}
