@@ -35,7 +35,7 @@ class AdminerController extends AbstractController
         $_SESSION["pwds"]['server'][$credentials['host']][$credentials['user']] = $credentials['pass'];
 
         $host = $credentials['host'];
-        if (!empty($credentials['port']) && $credentials['port'] !== 3306) {
+        if (!empty($credentials['port']) && (int)$credentials['port'] !== 3306) {
             $host .= ':' . $credentials['port'];
         }
 
