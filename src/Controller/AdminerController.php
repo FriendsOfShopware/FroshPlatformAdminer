@@ -19,6 +19,9 @@ class AdminerController extends AbstractController
 
         $credentials = $this->getDatabaseCredentials();
 
+        if (session_status() === \PHP_SESSION_ACTIVE) {
+            session_write_close();
+        }
         session_cache_limiter('');
         session_name('adminer_sid');
         session_start();
@@ -57,6 +60,9 @@ class AdminerController extends AbstractController
     #[Route(path: '/%shopware_administration.path_name%/adminer', name: 'administration.frosh_adminer', defaults: ['auth_required' => false, '_routeScope' => ['administration']], methods: ['GET', 'POST'])]
     public function index(): Response
     {
+        if (session_status() === \PHP_SESSION_ACTIVE) {
+            session_write_close();
+        }
         session_cache_limiter('');
         session_name('adminer_sid');
         session_start();
