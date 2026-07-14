@@ -27,20 +27,20 @@ class AdminerController extends AbstractController
         session_start();
 
         header_remove('Set-Cookie');
-        $_SESSION["token"] = rand(1, 1e6);
+        $_SESSION['token'] = rand(1, 1e6);
         $_SESSION['frosh_adminer_authenticated'] = true;
-
-        $_SESSION["dbs"]['server'][$credentials['host']][$credentials['user']] = [
-            $credentials['path']
-        ];
-
-        $_SESSION["db"]['server'][$credentials['host']][$credentials['user']][$credentials['path']] = true;
-        $_SESSION["pwds"]['server'][$credentials['host']][$credentials['user']] = $credentials['pass'];
 
         $host = $credentials['host'];
         if (!empty($credentials['port']) && (int)$credentials['port'] !== 3306) {
             $host .= ':' . $credentials['port'];
         }
+
+        $_SESSION['dbs']['server'][$host][$credentials['user']] = [
+            $credentials['path']
+        ];
+
+        $_SESSION['db']['server'][$host][$credentials['user']][$credentials['path']] = true;
+        $_SESSION['pwds']['server'][$host][$credentials['user']] = $credentials['pass'];
 
         $response = new JsonResponse([
             'url' => $this->generateUrl('administration.frosh_adminer', [
